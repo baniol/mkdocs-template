@@ -31,6 +31,5 @@ jobs:
             mkdocs build
             pip install awscli
             ls -lhat
-            aws s3 cp site s3://baniol-mkdocs-resources/ --recursive
-        working-directory: ./mkdocs
+            aws s3 cp site s3://baniol-static-mkdocs/ --recursive
    
