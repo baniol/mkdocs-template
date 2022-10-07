@@ -1,6 +1,9 @@
-# inside .github/workflows/your-action.yml
-name: Add File to Bucket
-on: push
+name: Deploy MkDocs
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -10,14 +13,24 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: eu-central-1
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force --clean --verbose
-      - run: pip install awscli
-      - run: ls -lhat
-      - run: aws s3 cp site s3://baniol-mkdocs-resources/ --recursive
+
+      - name: Install
+        run: |
+            pip install mkdocs
+            pip install mkdocs-material
+
+      - name: Deploy
+        run: |
+            mkdocs build
+            pip install awscli
+            ls -lhat
+            aws s3 cp site s3://baniol-mkdocs-resources/ --recursive
+        working-directory: ./mkdocs
    
