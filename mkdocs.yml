@@ -2,6 +2,7 @@ site_name: First Project
 site_url: https://example.com
 nav:
   - Home: index.md
+  - MkDocs on AWS: mkdocs-aws.md
   - Formatting: formatting/tables_and_metadata.md
   - Diagrams:
     - PlantUML: diagrams/plantuml.md
