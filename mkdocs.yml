@@ -2,12 +2,9 @@ site_name: First Project
 site_url: https://example.com
 nav:
   - Home: index.md
+  - Formatting: formatting/tables_and_metadata.md
   - Diagrams:
-    - Draw.io: subsection/drawio.md
-  - About:
-    - Intro: about.md
-    - Some: subsection/some_doc.md
-    - Diagram: subsection/embedded.md
+    - PlantUML: diagrams/plantuml.md
 theme:
   name: material
   palette:

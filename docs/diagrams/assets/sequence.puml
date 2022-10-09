@@ -19,7 +19,7 @@ hide footbox
 skinparam style strictuml
 
 !procedure $stepnum($number) 
-<back:black><color:white><b> $number </b></color></back>
+<back:black><color:white><b> $number </b></color></back>
 !endprocedure
 
 actor User as user
