@@ -5,12 +5,16 @@ nav:
   - Home: index.md
   - Custom Templating: template.md
   - MkDocs on AWS: mkdocs-aws.md
-  - Formatting: formatting/tables_and_metadata.md
   - Features:
     - Features: features/index.md
     - Admonitions: features/admonitions.md
-  - Diagrams:
-    - PlantUML: diagrams/plantuml.md
+    - Code Blocks: features/codeblocks.md
+    - Content Tabs: features/content_tabs.md
+    - Tables & Formatting: features/tables.md
+    - Diagrams: features/diagrams.md
+    - Footnotes: features/footnotes.md
+    - Icons & Images: features/icons.md
+    - Todos: features/todos.md
 
 
 # theme:
@@ -99,10 +103,8 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - tables
 
-# markdown_extensions:
-#     - toc:
-#         permalink: true
 plugins:
   - search
   # - meta
