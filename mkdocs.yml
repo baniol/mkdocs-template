@@ -4,7 +4,8 @@ repo_url: https://github.com/baniol/mkdocs-template
 nav:
   - Home: index.md
   - Custom Templating: template.md
-  - MkDocs on AWS: mkdocs-aws.md
+  - MkDocs on AWS: 
+    - srostame: mkdocs-aws.md
   - Features:
     - Features: features/index.md
     - Admonitions: features/admonitions.md
